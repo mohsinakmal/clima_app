@@ -29,11 +29,10 @@ class Location{
       }
     }
     try{
-      Position position = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.low);
+      Position position = await Geolocator.getCurrentPosition();
       latitude = position.latitude;
       longitude = position.longitude;
-      //print(position);
-      //return position;
+      return;
     } catch(e){
       print(e);
       return e;
